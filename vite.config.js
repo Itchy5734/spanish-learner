@@ -1,13 +1,26 @@
-// vite.config.js
-// Tells Vite this is a React project and where to find the HTML entry point
-
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  plugins: [react()],
-  // Ensures client-side routing works on Vercel
-  // (all URLs serve index.html and React Router handles the rest)
+  plugins: [
+    react({
+      // This tells Vite to treat .js files as JSX too
+      include: '**/*.{jsx,js}',
+    })
+  ],
+  esbuild: {
+    // Allow JSX syntax in .js files
+    loader: 'jsx',
+    include: /src\/.*\.js$/,
+    exclude: []
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      loader: {
+        '.js': 'jsx'
+      }
+    }
+  },
   build: {
     outDir: 'dist'
   }
