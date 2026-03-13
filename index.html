@@ -3,16 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#1a1a2e" />
-    <meta name="description" content="Spanish Learner - Interactive language learning app" />
     <title>Spanish Learner 🇪🇸</title>
     <style>
-      * { box-sizing: border-box; }
-      body { margin: 0; padding: 0; background: #1a1a2e; }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { background: #1a1a2e; display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: Helvetica, sans-serif; }
+      #root { color: white; text-align: center; }
     </style>
   </head>
   <body>
-    <!-- React mounts here -->
-    <div id="root"></div>
+    <div id="root">
+      <h1 style="color:#f5a623; font-size:48px;">🇪🇸</h1>
+      <h2 style="color:white;">Spanish Learner</h2>
+      <p style="color:#8888aa; margin-top:10px;">Loading...</p>
+    </div>
+    <script type="module" src="/src/index.jsx"></script>
   </body>
 </html>
