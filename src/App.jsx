@@ -10,12 +10,12 @@
 
 import React from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import { AuthProvider, useAuth } from './lib/AuthContext.js'
+import { AuthProvider, useAuth } from './lib/AuthContext.jsx'
 
-import LoginPage        from './pages/LoginPage.js'
-import StudentDashboard from './pages/StudentDashboard.js'
-import TutorDashboard   from './pages/TutorDashboard.js'
-import GamePage         from './pages/GamePage.js'
+import LoginPage        from './pages/LoginPage.jsx'
+import StudentDashboard from './pages/StudentDashboard.jsx'
+import TutorDashboard   from './pages/TutorDashboard.jsx'
+import GamePage         from './pages/GamePage.jsx'
 
 export default function App() {
   return (
